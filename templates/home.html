@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+
+{% block content %}
+   
+<div class="row">
+    <div class="col s4">
+        <div class="card">
+            <div class="card-content">
+                <a href="{% url 'confess' %}" class="btn purple darken-3 white-text 
+                waves-effect waves-light">Confess</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s4">
+        {% for confession in confessions %}
+        <div class="card">
+            <div class="card-title">
+                <div class="center">
+                        <div class="flow-text">
+                            {{confession.title}}
+                        </div>
+                    
+
+                </div>
+                
+            </div>
+            <small style="text-align: right;"><h6 style="font-size: 10px; padding-right: 10px;">{{confession.created}}</h6> </small> 
+            <div class="card-content">
+                <p class="flow-text">
+                    {{confession.confession}}
+                </p>
+               
+            </div>
+            
+            
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col s4">
+        
+    </div>
+</div>
+
+
+{% endblock content %}

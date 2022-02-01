@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "confession_site/wsgi.py",
+        "use": "@vercel/python@canary",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "confession_site/wsgi.py"
+        }
+    ]
+}
