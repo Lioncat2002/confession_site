@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-%%u#8f@1a0$&8x5wy@%wy8kf1*l0a7wh#k%-l#n-+@$2y(d=ai
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.repl.co']
-CSRF_TRUSTED_ORIGINS = ['https://*.repl.co']
+ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = []
 
 
 # Application definition
@@ -78,20 +78,20 @@ WSGI_APPLICATION = 'confession_site.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-# 'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-'default': {
-            'ENGINE': 'djongo',
-            'NAME': 'Confessions',
-            'ENFORCE_SCHEMA': False,
-            'CLIENT': {
-                'host': 'mongodb+srv://kittycat:tutul123@confessions.xr6pp.mongodb.net/Confessions?retryWrites=true&w=majority',
-                'username': 'kittycat',
-                'password': 'tutul123',
-            }  
-        }
+ 'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+#'default': {
+#            'ENGINE': 'djongo',
+#            'NAME': 'Confessions',
+#            'ENFORCE_SCHEMA': False,
+#            'CLIENT': {
+#                'host': 'mongodb+srv://kittycat:tutul123@confessions.xr6pp.mongodb.net/Confessions?retryWrites=true&w=majority',
+#                'username': 'kittycat',
+#                'password': 'tutul123',
+#            }  
+#        }
 }
 
 
